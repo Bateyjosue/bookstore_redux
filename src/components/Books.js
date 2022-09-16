@@ -2,17 +2,14 @@ import React from 'react';
 import Book from './Book';
 import InputBook from './InputBook';
 
-
-const Books = () => {
-  return (
-    <div>
-      <Book title="Book One" author="Josh Batey"/>
-      <Book title="Book Two" author="Ruth G."/>
-      <div className="new-book">
-        <InputBook />
-      </div>
+const Books = () => (
+  <div>
+    <Book title="Book One" author="Josh Batey" />
+    <Book title="Book Two" author="Ruth G." />
+    <div className="new-book">
+      <InputBook />
     </div>
-  )
-}
+  </div>
+);
 
-export default  Books;
+export default Books;

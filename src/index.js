@@ -5,11 +5,10 @@ import App from './App';
 import './index.css';
 
 ReactDOM.render(
-  <React.Fragment>
+  <>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.Fragment>
-  ,
-  document.getElementById('root')
+  </>,
+  document.getElementById('root'),
 );

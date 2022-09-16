@@ -1,6 +1,9 @@
-import React from 'react'
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function Book(props) {
+const Book = (props) => {
+  const { title, author } = props;
   return (
     <main>
       <div className="card">
@@ -8,8 +11,8 @@ export default function Book(props) {
           <div className="card-books__info">
             <ul>
               <li>Book Category</li>
-              <li><h1>{props.title}</h1></li>
-              <li>{props.author}</li>
+              <li><h1>{title}</h1></li>
+              <li>{author}</li>
               <li>
                 <a href="#">Comments</a>
                 <a href="#">Remove</a>
@@ -18,7 +21,7 @@ export default function Book(props) {
             </ul>
           </div>
           <div className="card-books__stat">
-            <span className="stat-progress__bard"></span>
+            <span className="stat-progress__bard" />
             <div>
               <span className="stat-progress__percent">64%</span>
               <span className="stat-progress__state">Completed</span>
@@ -36,5 +39,12 @@ export default function Book(props) {
         </article>
       </div>
     </main>
-  )
-}
+  );
+};
+
+Book.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+};
+
+export default Book;
