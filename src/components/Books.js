@@ -1,11 +1,11 @@
 import React from 'react';
 import Book from './Book';
 import InputBook from './InputBook';
+import {uid} from 'uid';
 
 const Books = () => (
   <div>
-    <Book title="Book One" author="Josh Batey" />
-    <Book title="Book Two" author="Ruth G." />
+    <Book key={uid(4)} />
     <div className="new-book">
       <InputBook />
     </div>
