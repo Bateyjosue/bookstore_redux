@@ -18,17 +18,13 @@ const bookReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK: return [
       ...state,
-      {
-        id:  uid(10),
-        title: action.book,
-        author: action.book,
-      },
+      action.payload,
     ];
-    case REMOVE_BOOK: return state.filter((remove) => remove === action.index);
+    case REMOVE_BOOK: return state.filter((remove) => remove.id !== action.index);
     default: return state;
   }
 };
-export const addBook = ({book}) => ({ type: ADD_BOOK, book: book });
+export const addBook = (book) => ({ type: ADD_BOOK, payload: book });
 export const removeBook = (index) => ({ type: REMOVE_BOOK, index });
 
 export default bookReducer;
