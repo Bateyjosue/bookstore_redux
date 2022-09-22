@@ -1,11 +1,26 @@
 import React from 'react';
 
-export default function InputBook() {
-  return (
+function InputBook(props) {
+  const { title, author } = props;
     <form className="form-add__book">
-      <input type="text" name="title" id="title" placeholder="Book Title" />
-      <input type="text" name="category" id="category" placeholder="Book Author" />
-      <input type="submit" name="submit" id="submit" value="Add Book" />
-    </form>
-  );
+      <input
+        type="text"
+        value={title}
+        name="title"
+        id="title"
+        placeholder="Book Title"
+        onChange={() => props.handleTitleChange}
+      />
+      <input
+        type="text"
+        value={author}
+        name="author"
+        id="author"
+        placeholder="Book Author"
+        onChange={() => props.handleAuthorChange}
+      />
+      <button type="button" id="submit" onClick={props.handleSubmit}>Add Book</button>
+    </form>;
 }
+
+export default InputBook;
