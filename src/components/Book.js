@@ -1,25 +1,27 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 // import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
+import { useSelector, shallowEqual } from 'react-redux';
 
 const Book = () => {
   // const { id, title, author } = props;
-  const books = useSelector((state) => state.books);
+  const books = useSelector((state) => state.books, shallowEqual);
   return (
     <main>
       <div className="card">
         <article>
             { books.map((book) => (
-          <><div className="card-books__info">
+              <>
+              {console.log(book)}
+          <div className="card-books__info">
                 <ul>
                   <li id={book.id}>Book Category</li>
                   <li><h1>{book.title}</h1></li>
                   <li>{book.author}</li>
                   <li>
                     <a href="#">Comments</a>
-                    <a href="#">Remove</a>
-                    <a href="#">Edit</a>
+                    <a href="#" id={book.id}>Remove</a>
+                    <a href="#" >Edit</a>
                   </li>
                 </ul>
               </div><div className="card-books__stat">
