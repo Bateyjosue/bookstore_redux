@@ -10,7 +10,7 @@ const initialState = [
   },
   {
     id: uid(10),
-    title: 'Book Two',
+    title: 'True Me',
     author: 'Joe Baen'
   },
 ];
@@ -18,17 +18,17 @@ const bookReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK: return [
       ...state,
-      // {
-      //   id: action.book.id,
-      //   title: action.book.title,
-      //   author: action.book.author,
-      // },
+      {
+        id:  uid(10),
+        title: action.book,
+        author: action.book,
+      },
     ];
     case REMOVE_BOOK: return state.filter((remove) => remove === action.index);
     default: return state;
   }
 };
-export const addBook = (book) => ({ type: ADD_BOOK, book });
-export const removeBook = (book, index) => ({ type: REMOVE_BOOK, index });
+export const addBook = ({book}) => ({ type: ADD_BOOK, book: book });
+export const removeBook = (index) => ({ type: REMOVE_BOOK, index });
 
 export default bookReducer;
