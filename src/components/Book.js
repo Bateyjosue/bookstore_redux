@@ -1,10 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-// import PropTypes from 'prop-types';
 import { useSelector, shallowEqual } from 'react-redux';
+import {useDispatch} from 'react-redux';
+import { removeBook } from '../redux/books/books';
 
 const Book = () => {
-  // const { id, title, author } = props;
+  const dispatch = useDispatch();
+  function handleClickRemove(e){
+    e.preventDefault();
+    dispatch(removeBook(e.target.id));
+  }
   const books = useSelector((state) => state.books, shallowEqual);
   return (
     <main>
@@ -12,7 +17,6 @@ const Book = () => {
         <article>
             { books.map((book) => (
               <>
-              {console.log(book)}
           <div className="card-books__info">
                 <ul>
                   <li id={book.id}>Book Category</li>
@@ -20,7 +24,7 @@ const Book = () => {
                   <li>{book.author}</li>
                   <li>
                     <a href="#">Comments</a>
-                    <a href="#" id={book.id}>Remove</a>
+                    <a href="#" id={book.id} onClick={handleClickRemove}>Remove</a>
                     <a href="#" >Edit</a>
                   </li>
                 </ul>
@@ -45,10 +49,5 @@ const Book = () => {
     </main>
   );
 };
-
-// Book.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   author: PropTypes.string.isRequired,
-// };
 
 export default Book;
