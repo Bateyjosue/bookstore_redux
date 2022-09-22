@@ -1,4 +1,5 @@
 import { uid } from 'uid';
+
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 
@@ -6,12 +7,12 @@ const initialState = [
   {
     id: uid(10),
     title: 'Book One',
-    author: 'Josh Batey'
+    author: 'Josh Batey',
   },
   {
     id: uid(10),
     title: 'True Me',
-    author: 'Joe Baen'
+    author: 'Joe Baen',
   },
 ];
 const bookReducer = (state = initialState, action) => {
