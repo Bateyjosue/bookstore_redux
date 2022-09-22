@@ -7,12 +7,12 @@ import React from 'react';
       <input type="text" value={props.title} 
         name="title" id="title" 
         placeholder="Book Title"
-        onChange={(e) => props.setTitle(e.target.value)}
+        onChange={() => props.handleTitleChange}
       />
       <input type="text" value={props.author} 
         name="author" id="author" 
         placeholder="Book Author"
-        onChange={(e) => props.setAuthor(e.target.value)}
+        onChange={() => props.handleAuthorChange}
       />
       <button type="button" id="submit" onClick={props.handleSubmit}>Add Book</button>
     </form>
