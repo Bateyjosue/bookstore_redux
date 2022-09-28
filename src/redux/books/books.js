@@ -13,7 +13,7 @@ const bookReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [...state, action.payload];
-    case REMOVE_BOOK:
+    case `${REMOVE_BOOK}/fulfilled`:
       return state.filter((remove) => remove.id !== action.index);
     case `${GET_BOOK}/fulfilled`:
       return [...state, ...action.payload];
@@ -22,7 +22,10 @@ const bookReducer = (state = initialState, action) => {
   }
 };
 export const addBook = (book) => ({ type: ADD_BOOK, payload: book });
-export const removeBook = (index) => ({ type: REMOVE_BOOK, index });
+export const removeBook = createAsyncThunk(REMOVE_BOOK, async (index) => {
+  await axios.delete(`${baseURL}/${index}`);
+  return index;
+});
 
 export const getBooks = createAsyncThunk(GET_BOOK, async () => {
   const response = await axios.get(baseURL);
