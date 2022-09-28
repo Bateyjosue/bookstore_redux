@@ -24,9 +24,10 @@ function Books() {
     e.preventDefault();
     if (!title.trim() || !author.trim()) return;
     const newBook = {
-      id: uid(10),
+      item_id: uid(10),
       title,
       author,
+      category: 'Fiction',
     };
     dispatch(addBook(newBook));
     setTitle('');
@@ -35,26 +36,26 @@ function Books() {
   return (
     <div>
       <Book />
-      <div className="new-book">
-
-        <form className="form-add__book">
+      <div className='new-book'>
+        <form className='form-add__book'>
           <input
-            type="text"
+            type='text'
             value={title}
-            name="title"
-            placeholder="Book Title"
+            name='title'
+            placeholder='Book Title'
             onChange={handleTitle}
           />
           <input
-            type="text"
+            type='text'
             value={author}
-            name="author"
-            placeholder="Book Author"
+            name='author'
+            placeholder='Book Author'
             onChange={handleAuthor}
           />
-          <button type="button" onClick={handleSubmit}>Add Book</button>
+          <button type='button' onClick={handleSubmit}>
+            Add Book
+          </button>
         </form>
-
       </div>
     </div>
   );
