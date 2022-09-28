@@ -5,8 +5,7 @@ import axios from 'axios';
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 const GET_BOOK = 'GET_BOOK';
-const baseURL =
-  'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/LlbJ2UKwVs2cchJYJmrM/books';
+const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/LlbJ2UKwVs2cchJYJmrM/books';
 
 const initialState = [];
 const bookReducer = (state = initialState, action) => {

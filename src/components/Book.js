@@ -30,7 +30,7 @@ const Book = () => {
                   <li>
                     <a href='#'>Comments</a>
                     <button
-                      type='Button'
+                      type='button'
                       id={book.item_id}
                       onClick={handleClickRemove}
                     >
