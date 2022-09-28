@@ -12,15 +12,15 @@ const Book = () => {
   const books = useSelector((state) => state.books);
   useEffect(() => {
     dispatch(getBooks());
-  }, []);
+  }, [dispatch]);
 
   return (
     <main>
-      <div className='card'>
+      <div className="card">
         <article>
           {books.map((book) => (
             <>
-              <div className='card-books__info'>
+              <div className="card-books__info">
                 <ul>
                   <li id={book.item_id}>{book.category}</li>
                   <li>
@@ -28,31 +28,31 @@ const Book = () => {
                   </li>
                   <li>{book.author}</li>
                   <li>
-                    <a href='#'>Comments</a>
+                    <a href="#">Comments</a>
                     <button
-                      type='button'
+                      type="button"
                       id={book.item_id}
                       onClick={handleClickRemove}
                     >
                       Remove
                     </button>
-                    <a href='#'>Edit</a>
+                    <a href="#">Edit</a>
                   </li>
                 </ul>
               </div>
-              <div className='card-books__stat'>
-                <span className='stat-progress__bard' />
+              <div className="card-books__stat">
+                <span className="stat-progress__bard" />
                 <div>
-                  <span className='stat-progress__percent'>64%</span>
-                  <span className='stat-progress__state'>Completed</span>
+                  <span className="stat-progress__percent">64%</span>
+                  <span className="stat-progress__state">Completed</span>
                 </div>
               </div>
-              <div className='card-books__update'>
+              <div className="card-books__update">
                 <ul>
                   <li>CURRENT CHAPTER</li>
                   <li>Chapter 17</li>
                   <li>
-                    <button type='button' className='update__progress'>
+                    <button type="button" className="update__progress">
                       UPDATE PROGRESS
                     </button>
                   </li>
