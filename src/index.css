@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   background-color: #fafafa;
+  box-sizing: border-box;
 }
 
 :root {
@@ -15,7 +16,7 @@ body {
 
 header {
   height: 2rem;
-  margin: 0 0 2.375rem;
+  width: 100%;
   padding: 1.4rem 2rem 1.6rem 2rem;
   background-color: #fff;
   display: flex;
@@ -27,9 +28,7 @@ nav {
 }
 
 nav a {
-  width: 3.688rem;
   height: 1rem;
-  margin: 1.125rem 2.563rem 0.688rem 0;
   font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;
@@ -42,9 +41,7 @@ nav a {
 }
 
 .log {
-  width: 15rem;
   height: 2.313rem;
-  margin: 0.375rem 2.938rem 0.125rem 0;
   font-family: var(--primary-font);
   font-size: 1rem;
   font-weight: bold;
@@ -63,7 +60,7 @@ nav a {
   border-radius: 8px;
 }
 
-.profile a span {
+.profile {
   display: none;
 }
 
@@ -129,13 +126,13 @@ form button {
 
 @media screen and (min-width: 768px) {
   header {
-    width: 87.5rem;
+    width: auto;
     height: 3rem;
-    margin: 0 0 2.375rem;
-    padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+    padding: 1.4rem 6rem 1.6rem 6rem;
     background-color: #fff;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   nav {
@@ -144,15 +141,9 @@ form button {
   }
 
   nav a {
-    width: 3.688rem;
     height: 1rem;
-    margin: 1.125rem 2.563rem 0.688rem 0;
     font-family: var(--primary-font);
     font-size: 0.813rem;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
     letter-spacing: 1.9px;
     color: #121212;
     text-decoration: none;
@@ -160,16 +151,10 @@ form button {
   }
 
   .log {
-    width: 15rem;
     height: 2.313rem;
-    margin: 0.375rem 2.938rem 0.125rem 0;
     font-family: var(--primary-font);
     font-size: 1.875rem;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
     color: #0290ff;
   }
 
@@ -177,11 +162,13 @@ form button {
     display: none;
   }
 
+  .profile {
+    display: block;
+  }
+
   .profile a span {
-    width: 1.063rem;
     height: 1.063rem;
     color: #0290ff;
-    display: flex;
     text-decoration: none;
   }
 
