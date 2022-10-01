@@ -14,8 +14,8 @@ export default function Category() {
   return (
     <div>
       <button
-        type='button'
-        id='submit'
+        type="button"
+        id="submit"
         onClick={handleCheckStatus}
         className={style.btn__submit}
       >

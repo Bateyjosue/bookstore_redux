@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/jsx-key */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -34,7 +35,7 @@ const Book = () => {
         {books.map((book) => (
           <article style={cardBook}>
             <>
-              <div className='card-books__info'>
+              <div className="card-books__info">
                 <ul style={ul}>
                   <li
                     className={style.card_books__info__category}
@@ -49,20 +50,20 @@ const Book = () => {
                     {book.author}
                   </li>
                   <li className={style.card_books__info__action}>
-                    <a href='#'>Comments</a>
+                    <a href="#">Comments</a>
                     <button
-                      type='button'
+                      type="button"
                       id={book.item_id}
                       onClick={handleClickRemove}
                     >
                       Remove
                     </button>
-                    <a href='#'>Edit</a>
+                    <a href="#">Edit</a>
                   </li>
                 </ul>
               </div>
-              <div className='card-books__stat'>
-                <div className={style.progression}></div>
+              <div className="card-books__stat">
+                <div className={style.progression} />
                 <div>
                   <span className={style.stat_progress__percent}>64%</span>
                   <span className={style.stat_progress__completed}>
@@ -70,13 +71,13 @@ const Book = () => {
                   </span>
                 </div>
               </div>
-              <div className={style.hr}></div>
+              <div className={style.hr} />
               <div className={style.card_books__update}>
                 <ul style={ul}>
                   <li>CURRENT CHAPTER</li>
                   <li>Chapter 17</li>
                   <li>
-                    <button type='button' className='update__progress'>
+                    <button type="button" className="update__progress">
                       UPDATE PROGRESS
                     </button>
                   </li>
