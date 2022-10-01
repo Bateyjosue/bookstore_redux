@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import InputBook from './InputBook';
 import { uid } from 'uid';
 import { useDispatch } from 'react-redux';
 import Book from './Book';
@@ -36,23 +35,24 @@ function Books() {
   return (
     <div>
       <Book />
-      <div className="new-book">
-        <form className="form-add__book">
+      <div className='new-book'>
+        <h2>ADD NEW BOOK</h2>
+        <form className='form-add__book'>
           <input
-            type="text"
+            type='text'
             value={title}
-            name="title"
-            placeholder="Book Title"
+            name='title'
+            placeholder='Book Title'
             onChange={handleTitle}
           />
           <input
-            type="text"
+            type='text'
             value={author}
-            name="author"
-            placeholder="Book Author"
+            name='author'
+            placeholder='Book Author'
             onChange={handleAuthor}
           />
-          <button type="button" onClick={handleSubmit}>
+          <button type='button' onClick={handleSubmit}>
             Add Book
           </button>
         </form>

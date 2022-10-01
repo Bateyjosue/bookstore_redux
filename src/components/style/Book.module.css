@@ -1,0 +1,167 @@
+@media screen and (min-width: 768px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .card_books__info__category {
+    color: #121212;
+    font-family: 'Monserrat';
+    opacity: 0.5;
+    font-weight: bold;
+    font-size: 0.875rem;
+    margin: 0 1rem 0 0;
+    letter-spacing: normal;
+  }
+  .card_books__info__title {
+    height: 1.813rem;
+    margin: 0.188rem 20.188rem 0 0;
+    font-family: 'Roboto Slab';
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.2px;
+    color: #121212;
+  }
+
+  .card_books__info__author {
+    height: 1.188rem;
+    margin: 0.5rem 0 0;
+    font-family: 'Roboto Slab';
+    font-size: 0.8rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4386bf;
+  }
+
+  .card_books__info__action,
+  .card_books__info__action a,
+  .card_books__info__action button {
+    display: flex;
+    gap: 1rem;
+    text-decoration: none;
+    width: 4.563rem;
+    height: 1.188rem;
+    margin: 0.188rem 0.938rem 0.125rem 0;
+    font-family: 'Roboto Slab';
+    font-size: 0.875rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4386bf;
+    border: none;
+    background: transparent;
+  }
+
+  .progression {
+    width: 6rem;
+    height: 6rem;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5rem;
+    border-bottom-color: #0290ff;
+    border-right-color: #0290ff;
+    border-top-color: #0290ff;
+    border-left-color: #ddd;
+    transform: rotate(45deg);
+  }
+
+  .stat_progress__percent {
+    width: 4.25rem;
+    height: 2.438rem;
+    margin: 0.063rem 5.75rem 0 0.688rem;
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #121212;
+  }
+
+  .stat_progress__completed {
+    width: 5rem;
+    height: 1.125rem;
+    margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+    opacity: 0.5;
+    font-family: 'Montserrat';
+    font-size: 0.875rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #121212;
+  }
+
+  .stat_progress__completed,
+  .stat_progress__percent {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .card_books__update ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .card_books__update ul li:nth-child(1) {
+    width: 7.875rem;
+    height: 1.125rem;
+    margin: 0.063rem 3.625rem 0 3.688rem;
+    opacity: 0.5;
+    font-family: 'Roboto Slab';
+    font-size: 0.813rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #121212;
+  }
+
+  .card_books__update ul li:nth-child(2) {
+    width: 4.688rem;
+    height: 1.313rem;
+    margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+    font-family: 'Roboto Slab';
+    font-size: 1rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.4px;
+    color: #121212;
+  }
+
+  .card_books__update ul li:nth-child(3) button {
+    width: 11.5rem;
+    height: 2.063rem;
+    margin: 0.75rem 0 0.563rem 3.688rem;
+    padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+    border-radius: 3px;
+    background-color: #0290ff;
+    color: white;
+    border: none;
+  }
+
+  .hr {
+    width: 0.1rem;
+    height: 4.375rem;
+    margin: 1.125rem 3.688rem 0 4.938rem;
+    border: solid 1px #e8e8e8;
+    background: #e8e8e8;
+  }
+}
