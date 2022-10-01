@@ -9,13 +9,18 @@ const App = () => (
     <header>
       <div className="log">BookStore</div>
       <nav>
-        <Link to="/">Books | </Link>
+        <Link to="/">Books </Link>
         <Link to="/category">Categories</Link>
       </nav>
       <div className="profile">
         <a href="#">
           <span className="material-symbols-outlined">account_circle</span>
         </a>
+      </div>
+      <div className="menu-hamberger">
+        <div />
+        <div />
+        <div />
       </div>
     </header>
     <Routes>

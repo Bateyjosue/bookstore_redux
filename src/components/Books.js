@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import InputBook from './InputBook';
 import { uid } from 'uid';
 import { useDispatch } from 'react-redux';
 import Book from './Book';
@@ -37,6 +36,7 @@ function Books() {
     <div>
       <Book />
       <div className="new-book">
+        <h2>ADD NEW BOOK</h2>
         <form className="form-add__book">
           <input
             type="text"

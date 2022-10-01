@@ -2,4 +2,238 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #0290ff;
+  --primary-dark-color: #121212;
+  --gray-color: #e8e8e8;
+  --primary-font: 'Montserrat', serif;
+  --secondary-font: 'RobotoSlab', sans-serif;
+}
+
+header {
+  height: 2rem;
+  width: 100%;
+  padding: 1.4rem 2rem 1.6rem 2rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: none;
+}
+
+nav a {
+  height: 1rem;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.log {
+  height: 2.313rem;
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+.menu-hamberger > div {
+  height: 3px;
+  width: 2rem;
+  background: #0290ff;
+  margin: 5px 0;
+  border-radius: 8px;
+}
+
+.profile {
+  display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+form input {
+  height: 1.6rem;
+  margin: 1rem 1rem 0 0;
+  padding: 0.813rem 0.813rem 0.813rem 1.063rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+}
+
+form button {
+  margin: 1.188rem 0 0 0;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  text-transform: uppercase;
+  width: 11.5rem;
+  font-family: var(--secondary-font);
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
+
+.new-book {
+  margin: 0 0 2.375rem;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.new-book h2 {
+  height: 1.5rem;
+  margin: 1.813rem 0.75rem 1.188rem 0;
+  font-family: var(--primary-font);
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    width: auto;
+    height: 3rem;
+    padding: 1.4rem 6rem 1.6rem 6rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav a {
+    height: 1rem;
+    font-family: var(--primary-font);
+    font-size: 0.813rem;
+    letter-spacing: 1.9px;
+    color: #121212;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .log {
+    height: 2.313rem;
+    font-family: var(--primary-font);
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #0290ff;
+  }
+
+  .menu-hamberger {
+    display: none;
+  }
+
+  .profile {
+    display: block;
+  }
+
+  .profile a span {
+    height: 1.063rem;
+    color: #0290ff;
+    text-decoration: none;
+  }
+
+  form {
+    flex-direction: row;
+  }
+
+  form input {
+    width: 40%;
+    height: 1.6rem;
+    margin: 1.188rem 2.125rem 0 0;
+    padding: 0.813rem 0.813rem 0.813rem 1.063rem;
+    border-radius: 4px;
+    border: solid 1px #e8e8e8;
+    background-color: #fff;
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.15px;
+    color: #c4c4c4;
+  }
+
+  form button {
+    margin: 1.188rem 0 0 2.125rem;
+    padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+    border-radius: 3px;
+    background-color: #0290ff;
+    border: none;
+    text-transform: uppercase;
+    width: 11.5rem;
+    font-family: var(--secondary-font);
+    font-size: 0.813rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .new-book {
+    margin: 0 0 2.375rem;
+    padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  }
+
+  .new-book h2 {
+    height: 1.5rem;
+    margin: 1.813rem 0.75rem 1.188rem 0;
+    font-family: var(--primary-font);
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.18px;
+    color: #888;
+  }
+
+  .card-books__stat {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
 }

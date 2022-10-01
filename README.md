@@ -7,7 +7,8 @@
 # Sreenshot
 
 # Live Demo
-> [Go live]()
+
+> [Go live](bookstor-jb.netlify.app)
 
 # Built With:
 
@@ -18,6 +19,7 @@
 - Es6 Module
 
 # Setup
+
 ### Clone the repository:
 
     $ git clone https://github.com/Bateyjosue/bookstore_redux.git
@@ -30,13 +32,13 @@
 
     $ npm i || npm install
 
-### Run the project 
+### Run the project
 
     $ npm start || npm run start
 
->Note: You can also run the development server or by running `npm dev` or `npm run dev` or  production server `npm build` or `npm run build`
+> Note: You can also run the development server or by running `npm dev` or `npm run dev` or production server `npm build` or `npm run build`
 
-### After the server is running open your browser and browse to the following address: 
+### After the server is running open your browser and browse to the following address:
 
     localhost:3000
 
@@ -53,8 +55,10 @@
 Contributions, issues, and feature requests are welcome!
 
 # Acknowledgement
-  To all people who help for the accomplishment of this project
-# Show your support 
+
+To all people who help for the accomplishment of this project
+
+# Show your support
 
 Give a ⭐️ if you like this project!
 
