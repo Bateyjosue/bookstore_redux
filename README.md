@@ -8,7 +8,7 @@
 
 # Live Demo
 
-> [Go live](bookstor-jb.netlify.app)
+> [Go live](https://bookstor-jb.netlify.app)
 
 # Built With:
 
